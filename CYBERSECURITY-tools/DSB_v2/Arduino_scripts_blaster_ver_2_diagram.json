@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "author": "Tomas Brychta",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -258.6, "left": -502.8, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -712.4,
+      "left": -138.4,
+      "attrs": {}
+    },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": -9.37, "left": -479.93, "attrs": {} }
+  ],
+  "connections": [
+    [ "mega:53", "sd1:CS", "yellow", [ "v0" ] ],
+    [ "sd1:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "mega:GND.3", "sd1:GND", "black", [ "v0" ] ],
+    [ "keypad1:R1", "mega:49", "black", [ "v0" ] ],
+    [ "keypad1:R2", "mega:48", "violet", [ "v0" ] ],
+    [ "keypad1:R3", "mega:47", "magenta", [ "v0" ] ],
+    [ "keypad1:R4", "mega:46", "gray", [ "v0" ] ],
+    [ "keypad1:C1", "mega:45", "green", [ "v0" ] ],
+    [ "keypad1:C2", "mega:44", "yellow", [ "v0" ] ],
+    [ "mega:43", "keypad1:C3", "red", [ "v0" ] ],
+    [ "keypad1:C4", "mega:42", "cyan", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
